@@ -1,0 +1,9 @@
+{% if chemical_list %}
+    <ul>
+    {% for chemical in chemical_list %}
+        <li><a href="/chemicals/{{ chemical.id }}/">{{ chemical.chemical_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No chemicals are available.</p>
+{% endif %}
